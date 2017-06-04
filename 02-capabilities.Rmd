@@ -1,3 +1,3 @@
-# Literature
+# IoT Capabilities {#capabilities}
 
 Here is a review of existing methods.

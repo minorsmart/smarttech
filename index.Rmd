@@ -21,5 +21,5 @@ knitr::write_bib(c(
 
 # Welcome
 
-This is an accompanying book to the HAN Minor Smart Industry and covers the major topics regarding the Internet of Things (IoT) implementation in an industrial setting. Also read [@mcewen_designing_2013].
+This is an accompanying book to the HAN Minor Smart Industry and covers the major topics regarding the Internet of Things (IoT) implementation in an industrial setting. The IoT is the outcome of the combination of physical objects, controllers, sensors and actuators and the internet [@mcewen_designing_2013].
 

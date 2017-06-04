@@ -1,3 +1,6 @@
 # IoT Capabilities {#capabilities}
 
-Here is a review of existing methods.
+<video width="400" height="300" controls>
+  <source src="./docs/iotbook_files/vids/design.mp4">
+  Your browser does not support this format.
+</video>

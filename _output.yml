@@ -3,7 +3,7 @@ bookdown::gitbook:
   config:
     toc:
       before: |
-        <li><img src="./iotbook_files/figure-html/msi.png" width="60" height="20"><a href="./">Internet of Things for Smart Industry</a></li>
+        <li><img src="./iotbook_files/figure-html/msi.png" width="60" height="20"><a href="./">IoT for Smart Industry</a></li>
       after: |
         <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
     edit: https://github.com/rstudio/bookdown-demo/edit/master/%s

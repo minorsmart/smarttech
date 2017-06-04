@@ -1,3 +1,3 @@
 #  - Introduction to IoT {#intro}
 
-The IoT is the product of physical objects, controllers, sensors and actuators and the internet [@mcewen_designing_2013].
+The IoT is the product of physical objects, controllers, sensors and actuators and the internet [@mcewen_designing_2013]. The first reference to the IoT was in 1982, when researchers at Carnegie Mellon University developed the world’s first IoT-enabled Coke Machine. Mark Weiser developed the concept further in the early 90s; and Kevin Ashton coined the term ‘Internet of Things’ around 1999.

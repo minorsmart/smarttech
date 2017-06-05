@@ -1,3 +1,8 @@
-#  - Data Analytics {#analytics}
+# Data Analytics {#analytics}
 
-We have finished a nice book.
+![Fig.12.1 - Data Analytics versus Science][fig12-1]
+
+[fig12-1]: ./images/datascience.png "Data Analytics versus Data Science"
+
+[@j_data_2013]
+

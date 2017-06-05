@@ -1,4 +1,4 @@
-#  - IoT Markets {#markets}
+# IoT Markets {#markets}
 
 Some _significant_ applications are demonstrated in this chapter.
 

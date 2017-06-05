@@ -19,7 +19,7 @@ knitr::write_bib(c(
 ), 'packages.bib')
 ```
 
-# - Welcome
+# Welcome
 
 This is an accompanying book to the HAN Minor Smart Industry and covers the major topics regarding the Internet of Things (IoT) implementation in an industrial setting.
 

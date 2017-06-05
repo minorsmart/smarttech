@@ -1,4 +1,4 @@
-# IoT Capabilities {#capabilities}
+#  - IoT Capabilities {#capabilities}
 
 <video width="400" height="300" controls>
   <source src="./docs/iotbook_files/vids/design.mp4">

@@ -133,49 +133,39 @@
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">B2</td>
-<td align="left">Monday</td>
-<td align="right">-8.1</td>
-</tr>
-<tr class="even">
 <td align="left">A3</td>
 <td align="left">Monday</td>
-<td align="right">-8.1</td>
+<td align="right">-8.4</td>
+</tr>
+<tr class="even">
+<td align="left">B1</td>
+<td align="left">Monday</td>
+<td align="right">-8.3</td>
 </tr>
 <tr class="odd">
 <td align="left">B1</td>
 <td align="left">Monday</td>
-<td align="right">-8.9</td>
+<td align="right">-8.0</td>
 </tr>
 <tr class="even">
-<td align="left">A3</td>
+<td align="left">A4</td>
 <td align="left">Monday</td>
-<td align="right">-8.2</td>
+<td align="right">-8.8</td>
 </tr>
 <tr class="odd">
-<td align="left">A1</td>
+<td align="left">B4</td>
 <td align="left">Monday</td>
-<td align="right">-8.7</td>
+<td align="right">-8.3</td>
 </tr>
 <tr class="even">
-<td align="left">B2</td>
+<td align="left">B1</td>
 <td align="left">Monday</td>
-<td align="right">-9.0</td>
+<td align="right">-8.3</td>
 </tr>
 <tr class="odd">
-<td align="left">B2</td>
-<td align="left">Monday</td>
-<td align="right">-8.6</td>
-</tr>
-<tr class="even">
 <td align="left">B2</td>
 <td align="left">Tuesday</td>
 <td align="right">-9.2</td>
-</tr>
-<tr class="odd">
-<td align="left">B3</td>
-<td align="left">Tuesday</td>
-<td align="right">-9.1</td>
 </tr>
 <tr class="even">
 <td align="left">A2</td>
@@ -183,9 +173,19 @@
 <td align="right">-8.5</td>
 </tr>
 <tr class="odd">
-<td align="left">A4</td>
+<td align="left">A1</td>
 <td align="left">Tuesday</td>
-<td align="right">-8.3</td>
+<td align="right">-9.0</td>
+</tr>
+<tr class="even">
+<td align="left">A3</td>
+<td align="left">Tuesday</td>
+<td align="right">-8.6</td>
+</tr>
+<tr class="odd">
+<td align="left">B2</td>
+<td align="left">Tuesday</td>
+<td align="right">-8.8</td>
 </tr>
 </tbody>
 </table>
@@ -193,29 +193,29 @@
 <p>Databases that follow the above described structure belong to the category of Relational Database Systems (RDBS). Popular (open source) instances are <a href="https://www.postgresql.org/">PostgreSQL</a> and <a href="https://www.mysql.com/">MySQL</a>. Another category of database systems that is gaining attention are the NoSQL systems. An example is <a href="https://www.mongodb.com/">MongoDB</a> (also open source). An important difference between the two categories is that an RDBS can only hold one value per cell in a table (like a spreadsheet), whereas a NoSQL database can hold nested vectors of values in one cell (like <a href="http://www.json.org/">JSON</a>).</p>
 <pre><code>## [
 ##   {
-##     &quot;DeviceID&quot;: &quot;A1&quot;,
-##     &quot;Weekday&quot;: &quot;Monday&quot;,
-##     &quot;Temperature&quot;: [-8.7]
-##   },
-##   {
 ##     &quot;DeviceID&quot;: &quot;A3&quot;,
 ##     &quot;Weekday&quot;: &quot;Monday&quot;,
-##     &quot;Temperature&quot;: [-8.1, -8.2]
+##     &quot;Temperature&quot;: [-8.4]
+##   },
+##   {
+##     &quot;DeviceID&quot;: &quot;A4&quot;,
+##     &quot;Weekday&quot;: &quot;Monday&quot;,
+##     &quot;Temperature&quot;: [-8.8]
 ##   },
 ##   {
 ##     &quot;DeviceID&quot;: &quot;B1&quot;,
 ##     &quot;Weekday&quot;: &quot;Monday&quot;,
-##     &quot;Temperature&quot;: [-8.9]
+##     &quot;Temperature&quot;: [-8.3, -8, -8.3]
 ##   },
 ##   {
-##     &quot;DeviceID&quot;: &quot;B2&quot;,
+##     &quot;DeviceID&quot;: &quot;B4&quot;,
 ##     &quot;Weekday&quot;: &quot;Monday&quot;,
-##     &quot;Temperature&quot;: [-8.1, -9, -8.6]
+##     &quot;Temperature&quot;: [-8.3]
 ##   }
 ## ]</code></pre>
-<p><span class="citation">(Video: Google Developers, n.d.)</span> <iframe width="560" height="315" src="https://www.youtube.com/embed/rRoy6I4gKWU" frameborder="0" allowfullscreen></iframe></p>
+<p><span class="citation">(Video: Google Developers <a href="#ref-google_developers_google_nodate">2012</a>)</span> <iframe width="560" height="315" src="https://www.youtube.com/embed/rRoy6I4gKWU" frameborder="0" allowfullscreen></iframe></p>
 <p>Another interesting alternative database architecture is the graph database. In a graph database data is represented as a network where the records are stored in nodes and the relationships in the edges. This is a very convenient solution when you are more interested in the relationships between objects rather than doing aggregations on the objects (sums, averages, etc).</p>
-<p><span class="citation">(Video: Neo4j - the World’s Leading Graph Database, n.d.)</span> <iframe width="560" height="315" src="https://www.youtube.com/embed/83P81ebgCxA" frameborder="0" allowfullscreen></iframe></p>
+<p><span class="citation">(Video: Neo4j - the World’s Leading Graph Database <a href="#ref-neo4j_-_the_worlds_leading_graph_database_intro_nodate">2016</a>)</span> <iframe width="560" height="315" src="https://www.youtube.com/embed/83P81ebgCxA" frameborder="0" allowfullscreen></iframe></p>
 </div>
 <div id="things-in-a-network" class="section level2">
 <h2><span class="header-section-number">9.2</span> Things in a network</h2>
@@ -223,6 +223,15 @@
 <div id="amazon-web-services" class="section level2">
 <h2><span class="header-section-number">9.3</span> Amazon Web Services</h2>
 
+</div>
+</div>
+<h3>References</h3>
+<div id="refs" class="references">
+<div id="ref-google_developers_google_nodate">
+<p>Google Developers. 2012. “Google I/O 2012 - SQL Vs NoSQL: Battle of the Backends.” <a href="https://www.youtube.com/watch?time_continue=3&amp;v=rRoy6I4gKWU" class="uri">https://www.youtube.com/watch?time_continue=3&amp;v=rRoy6I4gKWU</a>.</p>
+</div>
+<div id="ref-neo4j_-_the_worlds_leading_graph_database_intro_nodate">
+<p>Neo4j - the World’s Leading Graph Database. 2016. “Intro to Graph Databases.” <a href="https://www.youtube.com/watch?v=83P81ebgCxA" class="uri">https://www.youtube.com/watch?v=83P81ebgCxA</a>.</p>
 </div>
 </div>
             </section>

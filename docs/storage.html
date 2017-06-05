@@ -120,7 +120,7 @@
 <p>As most IoT devices have very limited memory resources, the data they produce has to be stored elsewhere. We discussed the data communication possibilities in <a href="communication.html#communication">section 8</a>. In theory the data could be gathered into a simple text file and applications could read from this source.</p>
 <p>However we soon would encounter some annoying practical problems. For instance while data is written to a text file it is blocked. This would mean other devices can not add their data resulting in data loss. Also a text file is not the most efficient user of memory and its size would grow exponentially when used in a professional application with large numbers of devices and users. Other issues include lack of search and filtering facilities and connecting to other data tables.</p>
 <p>The above mentioned problems are not uniquely related to the IoT system. It translates to any client server environment. Database systems have been developed to cope with the challenges of efficiently creating large quantities of data, read records, and update and delete them. These basic database functionalities have been summarized in the CRUD acronym.</p>
-<p>The most common language for doing CRUD operations on a database is SQL (Structured Query Language). It has a rather human friendly syntax. For example this is the instruction for retrieving a selection of data from a data table (what do you think it will return?):</p>
+<p>The most common language for doing CRUD operations on a database is SQL (Structured Query Language). It has a rather human friendly syntax. For example this is the instruction for retrieving a selection of data from a data table (What do you think it will return?):</p>
 <pre><code>SELECT * FROM SensorData WHERE Weekday = &#39;Monday&#39;</code></pre>
 <table>
 <caption><span id="tab:dbtable">Table 9.1: </span>An example database table: SensorData</caption>
@@ -133,65 +133,75 @@
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">B1</td>
-<td align="left">Monday</td>
-<td align="right">-8.9</td>
-</tr>
-<tr class="even">
-<td align="left">B3</td>
+<td align="left">B4</td>
 <td align="left">Monday</td>
 <td align="right">-8.1</td>
 </tr>
-<tr class="odd">
-<td align="left">B2</td>
-<td align="left">Monday</td>
-<td align="right">-8.9</td>
-</tr>
 <tr class="even">
-<td align="left">B3</td>
-<td align="left">Monday</td>
-<td align="right">-8.3</td>
-</tr>
-<tr class="odd">
-<td align="left">B2</td>
-<td align="left">Monday</td>
-<td align="right">-8.0</td>
-</tr>
-<tr class="even">
-<td align="left">A3</td>
+<td align="left">B1</td>
 <td align="left">Monday</td>
 <td align="right">-9.0</td>
 </tr>
 <tr class="odd">
-<td align="left">B1</td>
+<td align="left">A3</td>
 <td align="left">Monday</td>
-<td align="right">-8.9</td>
+<td align="right">-9.0</td>
 </tr>
 <tr class="even">
-<td align="left">B4</td>
+<td align="left">A2</td>
 <td align="left">Monday</td>
-<td align="right">-8.0</td>
+<td align="right">-9.1</td>
 </tr>
 <tr class="odd">
-<td align="left">B3</td>
-<td align="left">Tuesday</td>
-<td align="right">-8.4</td>
+<td align="left">A1</td>
+<td align="left">Monday</td>
+<td align="right">-8.1</td>
 </tr>
 <tr class="even">
-<td align="left">B3</td>
+<td align="left">A1</td>
+<td align="left">Monday</td>
+<td align="right">-8.2</td>
+</tr>
+<tr class="odd">
+<td align="left">B4</td>
+<td align="left">Monday</td>
+<td align="right">-9.0</td>
+</tr>
+<tr class="even">
+<td align="left">A1</td>
 <td align="left">Tuesday</td>
 <td align="right">-8.3</td>
 </tr>
 <tr class="odd">
-<td align="left">B4</td>
+<td align="left">B2</td>
+<td align="left">Tuesday</td>
+<td align="right">-8.2</td>
+</tr>
+<tr class="even">
+<td align="left">A1</td>
 <td align="left">Tuesday</td>
 <td align="right">-8.9</td>
+</tr>
+<tr class="odd">
+<td align="left">B1</td>
+<td align="left">Tuesday</td>
+<td align="right">-8.7</td>
 </tr>
 </tbody>
 </table>
 <p>A database consists of many tables. These tables can be related through key variables. For instance one table can contain sensor data while another table contains the meta data per device. These tables can be combined via a shared variable (<em>field</em>) containing the device IDs.</p>
 <p>Databases that follow the above described structure belong to the category of Relational Database Systems (RDBS). Popular (open source) instances are <a href="https://www.postgresql.org/">PostgreSQL</a> and <a href="https://www.mysql.com/">MySQL</a>. Another category of database systems that is gaining attention are the NoSQL systems. An example is <a href="https://www.mongodb.com/">MongoDB</a> (also open source). The main difference between the two categories is that an RDBS can only hold one value per cell in a table (like a spreadsheet), whereas a NoSQL database can hold nested vectors of values in one cell (like <a href="http://www.json.org/">JSON</a>).</p>
 <pre><code>## [
+##   {
+##     &quot;DeviceID&quot;: &quot;A1&quot;,
+##     &quot;Weekday&quot;: &quot;Monday&quot;,
+##     &quot;Temperature&quot;: [-8.1, -8.2]
+##   },
+##   {
+##     &quot;DeviceID&quot;: &quot;A2&quot;,
+##     &quot;Weekday&quot;: &quot;Monday&quot;,
+##     &quot;Temperature&quot;: [-9.1]
+##   },
 ##   {
 ##     &quot;DeviceID&quot;: &quot;A3&quot;,
 ##     &quot;Weekday&quot;: &quot;Monday&quot;,
@@ -200,22 +210,12 @@
 ##   {
 ##     &quot;DeviceID&quot;: &quot;B1&quot;,
 ##     &quot;Weekday&quot;: &quot;Monday&quot;,
-##     &quot;Temperature&quot;: [-8.9, -8.9]
-##   },
-##   {
-##     &quot;DeviceID&quot;: &quot;B2&quot;,
-##     &quot;Weekday&quot;: &quot;Monday&quot;,
-##     &quot;Temperature&quot;: [-8.9, -8]
-##   },
-##   {
-##     &quot;DeviceID&quot;: &quot;B3&quot;,
-##     &quot;Weekday&quot;: &quot;Monday&quot;,
-##     &quot;Temperature&quot;: [-8.1, -8.3]
+##     &quot;Temperature&quot;: [-9]
 ##   },
 ##   {
 ##     &quot;DeviceID&quot;: &quot;B4&quot;,
 ##     &quot;Weekday&quot;: &quot;Monday&quot;,
-##     &quot;Temperature&quot;: [-8]
+##     &quot;Temperature&quot;: [-8.1, -9]
 ##   }
 ## ]</code></pre>
 <div id="video-google-io-2012---sql-vs-nosql-battle-of-the-backends" class="section level4">

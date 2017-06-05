@@ -35,7 +35,7 @@ knitr::kable(head(SensorData, 11), booktabs = TRUE,
 
 A database consists of many tables. These tables can be related through key variables. For instance one table can contain sensor data while another table contains the meta data per device. These tables can be combined via a shared variable (*field*) containing the device IDs.
 
-Databases that follow the above described structure belong to the category of Relational Database Systems (RDBS). Popular (open source) instances are PostgreSQL and MySQL. Another category of database systems that is gaining attention are the NoSQL systems. An example is MongoDB (also open source). The main difference between the two categories is that a RDBS can only hold one value per cell in a table (like a spreadsheet), whereas a NoSQL database can hold nested vectors of values in one cell (like JSON).
+Databases that follow the above described structure belong to the category of Relational Database Systems (RDBS). Popular (open source) instances are PostgreSQL and MySQL. Another category of database systems that is gaining attention are the NoSQL systems. An example is MongoDB (also open source). The main difference between the two categories is that an RDBS can only hold one value per cell in a table (like a spreadsheet), whereas a NoSQL database can hold nested vectors of values in one cell (like JSON).
 
 ```{r nosql, echo=FALSE, message=FALSE, warning=FALSE}
 library(jsonlite)

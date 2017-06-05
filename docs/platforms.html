@@ -133,94 +133,84 @@
 </thead>
 <tbody>
 <tr class="odd">
+<td align="left">A2</td>
+<td align="left">Monday</td>
+<td align="right">-8.2</td>
+</tr>
+<tr class="even">
+<td align="left">A1</td>
+<td align="left">Monday</td>
+<td align="right">-8.3</td>
+</tr>
+<tr class="odd">
 <td align="left">A4</td>
 <td align="left">Monday</td>
 <td align="right">-8.2</td>
 </tr>
 <tr class="even">
-<td align="left">A4</td>
-<td align="left">Monday</td>
-<td align="right">-8.6</td>
-</tr>
-<tr class="odd">
-<td align="left">A3</td>
-<td align="left">Monday</td>
-<td align="right">-9.1</td>
-</tr>
-<tr class="even">
-<td align="left">B1</td>
-<td align="left">Monday</td>
-<td align="right">-9.2</td>
-</tr>
-<tr class="odd">
-<td align="left">B2</td>
-<td align="left">Monday</td>
-<td align="right">-8.8</td>
-</tr>
-<tr class="even">
 <td align="left">B3</td>
 <td align="left">Monday</td>
-<td align="right">-8.3</td>
+<td align="right">-8.7</td>
 </tr>
 <tr class="odd">
 <td align="left">A2</td>
 <td align="left">Monday</td>
-<td align="right">-9.1</td>
+<td align="right">-8.8</td>
+</tr>
+<tr class="even">
+<td align="left">A2</td>
+<td align="left">Monday</td>
+<td align="right">-8.6</td>
+</tr>
+<tr class="odd">
+<td align="left">A2</td>
+<td align="left">Monday</td>
+<td align="right">-8.1</td>
+</tr>
+<tr class="even">
+<td align="left">A4</td>
+<td align="left">Monday</td>
+<td align="right">-8.9</td>
+</tr>
+<tr class="odd">
+<td align="left">A2</td>
+<td align="left">Tuesday</td>
+<td align="right">-8.6</td>
 </tr>
 <tr class="even">
 <td align="left">B2</td>
-<td align="left">Monday</td>
-<td align="right">-8.8</td>
-</tr>
-<tr class="odd">
-<td align="left">A3</td>
 <td align="left">Tuesday</td>
-<td align="right">-8.8</td>
-</tr>
-<tr class="even">
-<td align="left">A1</td>
-<td align="left">Tuesday</td>
-<td align="right">-8.8</td>
+<td align="right">-8.9</td>
 </tr>
 <tr class="odd">
 <td align="left">B3</td>
 <td align="left">Tuesday</td>
-<td align="right">-8.5</td>
+<td align="right">-9.2</td>
 </tr>
 </tbody>
 </table>
 <p>A database consists of many tables. These tables can be related through key variables. For instance one table can contain sensor data while another table contains the meta data per device. These tables can be combined via a shared variable (<em>field</em>) containing the device IDs.</p>
-<p>Databases that follow the above described structure belong to the category of Relational Database Systems (RDBS). Popular (open source) instances are PostgreSQL and MySQL. Another category of database systems that is gaining attention are the NoSQL systems. An example is MongoDB (also open source). The main difference between the two categories is that a RDBS can only hold one value per cell in a table (like a spreadsheet), whereas a NoSQL database can hold nested vectors of values in one cell (like JSON).</p>
+<p>Databases that follow the above described structure belong to the category of Relational Database Systems (RDBS). Popular (open source) instances are PostgreSQL and MySQL. Another category of database systems that is gaining attention are the NoSQL systems. An example is MongoDB (also open source). The main difference between the two categories is that an RDBS can only hold one value per cell in a table (like a spreadsheet), whereas a NoSQL database can hold nested vectors of values in one cell (like JSON).</p>
 <pre><code>## [
+##   {
+##     &quot;DeviceID&quot;: &quot;A1&quot;,
+##     &quot;Weekday&quot;: &quot;Monday&quot;,
+##     &quot;Temperature&quot;: [-8.3]
+##   },
 ##   {
 ##     &quot;DeviceID&quot;: &quot;A2&quot;,
 ##     &quot;Weekday&quot;: &quot;Monday&quot;,
-##     &quot;Temperature&quot;: [-9.1]
-##   },
-##   {
-##     &quot;DeviceID&quot;: &quot;A3&quot;,
-##     &quot;Weekday&quot;: &quot;Monday&quot;,
-##     &quot;Temperature&quot;: [-9.1]
+##     &quot;Temperature&quot;: [-8.2, -8.8, -8.6, -8.1]
 ##   },
 ##   {
 ##     &quot;DeviceID&quot;: &quot;A4&quot;,
 ##     &quot;Weekday&quot;: &quot;Monday&quot;,
-##     &quot;Temperature&quot;: [-8.2, -8.6]
-##   },
-##   {
-##     &quot;DeviceID&quot;: &quot;B1&quot;,
-##     &quot;Weekday&quot;: &quot;Monday&quot;,
-##     &quot;Temperature&quot;: [-9.2]
-##   },
-##   {
-##     &quot;DeviceID&quot;: &quot;B2&quot;,
-##     &quot;Weekday&quot;: &quot;Monday&quot;,
-##     &quot;Temperature&quot;: [-8.8, -8.8]
+##     &quot;Temperature&quot;: [-8.2, -8.9]
 ##   },
 ##   {
 ##     &quot;DeviceID&quot;: &quot;B3&quot;,
 ##     &quot;Weekday&quot;: &quot;Monday&quot;,
-##     &quot;Temperature&quot;: [-8.3]
+##     &quot;Temperature&quot;: [-8.7]
 ##   }
 ## ]</code></pre>
 </div>

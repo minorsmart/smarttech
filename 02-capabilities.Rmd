@@ -1,6 +1,6 @@
 # IoT Capabilities {#capabilities}
 
 <video width="400" height="300" controls>
-  <source src="./docs/iotbook_files/vids/design.mp4">
+  <source src="./vids/design.mp4">
   Your browser does not support this format.
 </video>

@@ -84,7 +84,7 @@
   \postauthor{\par}
   \predate{\centering\large\emph}
   \postdate{\par}
-  \date{2017-06-05}
+  \date{2017-06-06}
 
 \usepackage{booktabs}
 \usepackage{amsthm}
@@ -216,18 +216,18 @@ SELECT * FROM SensorData WHERE Weekday = 'Monday'
 \toprule
 DeviceID & Weekday & Temperature\\
 \midrule
-A1 & Monday & -8.9\\
-A3 & Monday & -8.1\\
-A2 & Monday & -8.0\\
-A3 & Monday & -8.2\\
-B3 & Monday & -9.0\\
+B4 & Monday & -8.5\\
+A1 & Monday & -8.0\\
+B4 & Monday & -8.5\\
+B1 & Monday & -8.2\\
+B1 & Monday & -8.8\\
 \addlinespace
-A3 & Monday & -8.9\\
-B2 & Monday & -8.1\\
-B4 & Tuesday & -8.6\\
-B3 & Tuesday & -8.7\\
-B4 & Tuesday & -8.1\\
-B4 & Tuesday & -8.9\\
+A3 & Monday & -8.8\\
+B1 & Monday & -8.6\\
+B3 & Monday & -8.6\\
+B2 & Tuesday & -8.3\\
+A3 & Tuesday & -9.0\\
+B2 & Tuesday & -8.8\\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -255,27 +255,27 @@ database can hold nested vectors of values in one cell (like
 ##   {
 ##     "DeviceID": "A1",
 ##     "Weekday": "Monday",
-##     "Temperature": [-8.9]
-##   },
-##   {
-##     "DeviceID": "A2",
-##     "Weekday": "Monday",
 ##     "Temperature": [-8]
 ##   },
 ##   {
 ##     "DeviceID": "A3",
 ##     "Weekday": "Monday",
-##     "Temperature": [-8.1, -8.2, -8.9]
+##     "Temperature": [-8.8]
 ##   },
 ##   {
-##     "DeviceID": "B2",
+##     "DeviceID": "B1",
 ##     "Weekday": "Monday",
-##     "Temperature": [-8.1]
+##     "Temperature": [-8.2, -8.8, -8.6]
 ##   },
 ##   {
 ##     "DeviceID": "B3",
 ##     "Weekday": "Monday",
-##     "Temperature": [-9]
+##     "Temperature": [-8.6]
+##   },
+##   {
+##     "DeviceID": "B4",
+##     "Weekday": "Monday",
+##     "Temperature": [-8.5, -8.5]
 ##   }
 ## ]
 \end{verbatim}

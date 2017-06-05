@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="communication.html">
-<link rel="next" href="privacy.html">
+<link rel="prev" href="apps.html">
+<link rel="next" href="arduino.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -110,32 +110,18 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="platforms" class="section level1">
-<h1><span class="header-section-number">Chapter 9</span> Cloud Platforms</h1>
-<p>After sensors start to send data it is necessary that you define a place where that data should be stored. In the context of IoT the Cloud is a place somewhere on the internet where a provider allows recognized sensors to store their raw data in a database. You as the owner has access to that database, are able to program it and know how results could be made visible on dashboards. So it is not necessary anymore to maintain your own private servers in your own data centers, but cloud platform companies are now taking over that role.</p>
-<p>Raw data is in fact meaningless. You will have to analyze it, reshuffle, run statistics on it, correlate it with other data, watch for exceptional values and so on to make raw sensor data valuable for your business goals. We will touch on data analytics, machine learning and Data Science in <a href="analytics.html#analytics">section 13</a>.</p>
-<p>We will look into cloud platforms, their place in the IoT infrastructure and explore one of the many cloud solutions.</p>
-<div id="data-in-the-cloud" class="section level2">
-<h2><span class="header-section-number">9.1</span> Data in the cloud</h2>
-<p>As most IoT devices have very limited memory resources, the data they produce has to be stored elsewhere. We discussed the data communication possibilities in <a href="communication.html#communication">section 8</a>. In theory the data could be gathered into a simple text file and applications could read from this source.</p>
-<p>However we soon would encounter some annoying practical problems. For instance while data is written to a text file it is blocked. This would mean other devices can not add their data resulting in data loss. Also a text file is not the most efficient user of memory and its size would grow exponentially when used in a professional application with large numbers of devices and users. Other issues include lack of search and filtering facilities and connecting to other data tables.</p>
-<p>The above mentioned problems are not uniquely related to the IoT system. It translates to any client server environment. Database systems have been developed to cope with the challenges of efficiently creating large quantities of data, read records, and update and delete them. These basic database functionalities have been summarized in the CRUD acronym.</p>
-</div>
-<div id="things-in-a-network" class="section level2">
-<h2><span class="header-section-number">9.2</span> Things in a network</h2>
-</div>
-<div id="amazon-web-services" class="section level2">
-<h2><span class="header-section-number">9.3</span> Amazon Web Services</h2>
+<div id="opensource" class="section level1">
+<h1><span class="header-section-number">Chapter 15</span> Arduino Programming</h1>
+<p>We have finished a nice book.</p>
 
-</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="communication.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="privacy.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="apps.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="arduino.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -164,7 +150,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/minorsmart/smarttech/blob/master/08-cloud.Rmd",
+"link": "https://github.com/minorsmart/smarttech/blob/master/14-opensource.Rmd",
 "text": "Edit"
 },
 "download": ["iotbook.pdf", "iotbook.epub"],

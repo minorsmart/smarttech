@@ -13,10 +13,6 @@ However we soon would encounter some annoying practical problems. For instance w
 
 The above mentioned problems are not uniquely related to the IoT system. It translates to any client server environment. Database systems have been developed to cope with the challenges of efficiently creating large quantities of data, read records, and update and delete them. These basic database functionalities have been summarized in the CRUD accronym. 
 
-
-
-You as the owner has access to that database, are able to program it and know how results could be made visible on dashboards. So it is not necessary anymore to maintain your own private servers in your own data centers, but cloud platform companies are now taking over that role.
-
 ## Things in a network
 
 ## Amazon Web Services

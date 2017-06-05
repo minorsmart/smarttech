@@ -45,12 +45,14 @@ newDF <- aggregate(Temperature ~ DeviceID + Weekday, SensorData, list) %>% filte
 toJSON(newDF, pretty=TRUE)
 ```
 
-#### Google I/O 2012 - SQL vs NoSQL: Battle of the Backends
+
+[Video: @google_developers_google_nodate]
 <iframe width="560" height="315" src="https://www.youtube.com/embed/rRoy6I4gKWU" frameborder="0" allowfullscreen></iframe>
 
-Another interesting alternative database architecture is the graph database. In a graph database data is represented as a network where the records are stored in nodes and the relationships in the edges. This is a very convenient solution when you are more interested in the relationships between objects rather than doing aggregations on the objects (sums, averages).
+Another interesting alternative database architecture is the graph database. In a graph database data is represented as a network where the records are stored in nodes and the relationships in the edges. This is a very convenient solution when you are more interested in the relationships between objects rather than doing aggregations on the objects (sums, averages, etc).
 
-#### Intro to Graph Databases
+
+[Video: @neo4j_-_the_worlds_leading_graph_database_intro_nodate]
 <iframe width="560" height="315" src="https://www.youtube.com/embed/83P81ebgCxA" frameborder="0" allowfullscreen></iframe>
 
 

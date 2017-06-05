@@ -6,7 +6,7 @@ Raw data is in fact meaningless. You will have to analyze it, reshuffle, run sta
 
 We will look into cloud platforms, their place in the IoT infrastructure and explore one of the many cloud solutions.
 
-## Data in the cloud
+## Database Systems
 As most IoT devices have very limited memory resources, the data they produce has to be stored elsewhere. We discussed the data communication possibilities in [section 8](#communication). In theory the data could be gathered into a simple text file and applications could read from this source.
 
 However we soon would encounter some annoying practical problems. For instance while data is written to a text file it is blocked. This would mean other devices can not add their data resulting in data loss. Also a text file is not the most efficient user of memory and its size would grow exponentially when used in a professional application with large numbers of devices and users. Other issues include lack of search and filtering facilities and connecting to other data tables.

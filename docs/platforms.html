@@ -78,7 +78,7 @@
 <li class="chapter" data-level="7" data-path="sensors.html"><a href="sensors.html"><i class="fa fa-check"></i><b>7</b> Sensors</a></li>
 <li class="chapter" data-level="8" data-path="communication.html"><a href="communication.html"><i class="fa fa-check"></i><b>8</b> Data Communication</a></li>
 <li class="chapter" data-level="9" data-path="platforms.html"><a href="platforms.html"><i class="fa fa-check"></i><b>9</b> Cloud Platforms</a><ul>
-<li class="chapter" data-level="9.1" data-path="platforms.html"><a href="platforms.html#data-in-the-cloud"><i class="fa fa-check"></i><b>9.1</b> Data in the cloud</a></li>
+<li class="chapter" data-level="9.1" data-path="platforms.html"><a href="platforms.html#database-systems"><i class="fa fa-check"></i><b>9.1</b> Database Systems</a></li>
 <li class="chapter" data-level="9.2" data-path="platforms.html"><a href="platforms.html#things-in-a-network"><i class="fa fa-check"></i><b>9.2</b> Things in a network</a></li>
 <li class="chapter" data-level="9.3" data-path="platforms.html"><a href="platforms.html#amazon-web-services"><i class="fa fa-check"></i><b>9.3</b> Amazon Web Services</a></li>
 </ul></li>
@@ -115,8 +115,8 @@
 <p>After sensors start to send data it is necessary that you define a place where that data should be stored. In the context of IoT the Cloud is a place somewhere on the internet where a provider allows recognized sensors to store their raw data in a database. You as the owner has access to that database, are able to program it and know how results could be made visible on dashboards. So it is not necessary anymore to maintain your own private servers in your own data centers, but cloud platform companies are now taking over that role.</p>
 <p>Raw data is in fact meaningless. You will have to analyze it, reshuffle, run statistics on it, correlate it with other data, watch for exceptional values and so on to make raw sensor data valuable for your business goals. We will touch on data analytics, machine learning and Data Science in <a href="analytics.html#analytics">section 13</a>.</p>
 <p>We will look into cloud platforms, their place in the IoT infrastructure and explore one of the many cloud solutions.</p>
-<div id="data-in-the-cloud" class="section level2">
-<h2><span class="header-section-number">9.1</span> Data in the cloud</h2>
+<div id="database-systems" class="section level2">
+<h2><span class="header-section-number">9.1</span> Database Systems</h2>
 <p>As most IoT devices have very limited memory resources, the data they produce has to be stored elsewhere. We discussed the data communication possibilities in <a href="communication.html#communication">section 8</a>. In theory the data could be gathered into a simple text file and applications could read from this source.</p>
 <p>However we soon would encounter some annoying practical problems. For instance while data is written to a text file it is blocked. This would mean other devices can not add their data resulting in data loss. Also a text file is not the most efficient user of memory and its size would grow exponentially when used in a professional application with large numbers of devices and users. Other issues include lack of search and filtering facilities and connecting to other data tables.</p>
 <p>The above mentioned problems are not uniquely related to the IoT system. It translates to any client server environment. Database systems have been developed to cope with the challenges of efficiently creating large quantities of data, read records, and update and delete them. These basic database functionalities have been summarized in the CRUD acronym.</p>
@@ -133,59 +133,59 @@
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">A2</td>
-<td align="left">Monday</td>
-<td align="right">-8.2</td>
-</tr>
-<tr class="even">
-<td align="left">A1</td>
-<td align="left">Monday</td>
-<td align="right">-8.3</td>
-</tr>
-<tr class="odd">
-<td align="left">A4</td>
-<td align="left">Monday</td>
-<td align="right">-8.2</td>
-</tr>
-<tr class="even">
 <td align="left">B3</td>
-<td align="left">Monday</td>
-<td align="right">-8.7</td>
-</tr>
-<tr class="odd">
-<td align="left">A2</td>
-<td align="left">Monday</td>
-<td align="right">-8.8</td>
-</tr>
-<tr class="even">
-<td align="left">A2</td>
 <td align="left">Monday</td>
 <td align="right">-8.6</td>
 </tr>
+<tr class="even">
+<td align="left">A3</td>
+<td align="left">Monday</td>
+<td align="right">-9.1</td>
+</tr>
 <tr class="odd">
-<td align="left">A2</td>
+<td align="left">B1</td>
+<td align="left">Monday</td>
+<td align="right">-9.0</td>
+</tr>
+<tr class="even">
+<td align="left">B1</td>
+<td align="left">Monday</td>
+<td align="right">-8.9</td>
+</tr>
+<tr class="odd">
+<td align="left">B3</td>
 <td align="left">Monday</td>
 <td align="right">-8.1</td>
 </tr>
 <tr class="even">
-<td align="left">A4</td>
+<td align="left">B2</td>
+<td align="left">Monday</td>
+<td align="right">-9.1</td>
+</tr>
+<tr class="odd">
+<td align="left">B4</td>
 <td align="left">Monday</td>
 <td align="right">-8.9</td>
+</tr>
+<tr class="even">
+<td align="left">A4</td>
+<td align="left">Tuesday</td>
+<td align="right">-8.5</td>
 </tr>
 <tr class="odd">
 <td align="left">A2</td>
 <td align="left">Tuesday</td>
-<td align="right">-8.6</td>
+<td align="right">-8.5</td>
 </tr>
 <tr class="even">
-<td align="left">B2</td>
+<td align="left">A2</td>
 <td align="left">Tuesday</td>
-<td align="right">-8.9</td>
+<td align="right">-9.2</td>
 </tr>
 <tr class="odd">
 <td align="left">B3</td>
 <td align="left">Tuesday</td>
-<td align="right">-9.2</td>
+<td align="right">-8.1</td>
 </tr>
 </tbody>
 </table>
@@ -193,24 +193,29 @@
 <p>Databases that follow the above described structure belong to the category of Relational Database Systems (RDBS). Popular (open source) instances are PostgreSQL and MySQL. Another category of database systems that is gaining attention are the NoSQL systems. An example is MongoDB (also open source). The main difference between the two categories is that an RDBS can only hold one value per cell in a table (like a spreadsheet), whereas a NoSQL database can hold nested vectors of values in one cell (like JSON).</p>
 <pre><code>## [
 ##   {
-##     &quot;DeviceID&quot;: &quot;A1&quot;,
+##     &quot;DeviceID&quot;: &quot;A3&quot;,
 ##     &quot;Weekday&quot;: &quot;Monday&quot;,
-##     &quot;Temperature&quot;: [-8.3]
+##     &quot;Temperature&quot;: [-9.1]
 ##   },
 ##   {
-##     &quot;DeviceID&quot;: &quot;A2&quot;,
+##     &quot;DeviceID&quot;: &quot;B1&quot;,
 ##     &quot;Weekday&quot;: &quot;Monday&quot;,
-##     &quot;Temperature&quot;: [-8.2, -8.8, -8.6, -8.1]
+##     &quot;Temperature&quot;: [-9, -8.9]
 ##   },
 ##   {
-##     &quot;DeviceID&quot;: &quot;A4&quot;,
+##     &quot;DeviceID&quot;: &quot;B2&quot;,
 ##     &quot;Weekday&quot;: &quot;Monday&quot;,
-##     &quot;Temperature&quot;: [-8.2, -8.9]
+##     &quot;Temperature&quot;: [-9.1]
 ##   },
 ##   {
 ##     &quot;DeviceID&quot;: &quot;B3&quot;,
 ##     &quot;Weekday&quot;: &quot;Monday&quot;,
-##     &quot;Temperature&quot;: [-8.7]
+##     &quot;Temperature&quot;: [-8.6, -8.1]
+##   },
+##   {
+##     &quot;DeviceID&quot;: &quot;B4&quot;,
+##     &quot;Weekday&quot;: &quot;Monday&quot;,
+##     &quot;Temperature&quot;: [-8.9]
 ##   }
 ## ]</code></pre>
 </div>

@@ -133,59 +133,59 @@
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">B1</td>
-<td align="left">Monday</td>
-<td align="right">-8.5</td>
-</tr>
-<tr class="even">
 <td align="left">A3</td>
 <td align="left">Monday</td>
-<td align="right">-8.6</td>
-</tr>
-<tr class="odd">
-<td align="left">B1</td>
-<td align="left">Monday</td>
-<td align="right">-9.1</td>
+<td align="right">-8.0</td>
 </tr>
 <tr class="even">
-<td align="left">B3</td>
+<td align="left">B4</td>
 <td align="left">Monday</td>
-<td align="right">-8.5</td>
+<td align="right">-9.1</td>
 </tr>
 <tr class="odd">
 <td align="left">A4</td>
 <td align="left">Monday</td>
-<td align="right">-8.3</td>
+<td align="right">-9.1</td>
 </tr>
 <tr class="even">
-<td align="left">B1</td>
+<td align="left">A3</td>
 <td align="left">Monday</td>
-<td align="right">-9.2</td>
+<td align="right">-8.1</td>
 </tr>
 <tr class="odd">
-<td align="left">B3</td>
+<td align="left">B4</td>
 <td align="left">Monday</td>
 <td align="right">-8.1</td>
 </tr>
 <tr class="even">
-<td align="left">A1</td>
-<td align="left">Monday</td>
-<td align="right">-8.9</td>
+<td align="left">B4</td>
+<td align="left">Tuesday</td>
+<td align="right">-8.6</td>
 </tr>
 <tr class="odd">
-<td align="left">B3</td>
+<td align="left">A1</td>
 <td align="left">Tuesday</td>
-<td align="right">-9.1</td>
+<td align="right">-8.5</td>
 </tr>
 <tr class="even">
-<td align="left">B3</td>
+<td align="left">B2</td>
 <td align="left">Tuesday</td>
-<td align="right">-8.2</td>
+<td align="right">-8.1</td>
 </tr>
 <tr class="odd">
-<td align="left">A1</td>
+<td align="left">A3</td>
 <td align="left">Tuesday</td>
-<td align="right">-9.2</td>
+<td align="right">-8.0</td>
+</tr>
+<tr class="even">
+<td align="left">B4</td>
+<td align="left">Tuesday</td>
+<td align="right">-8.3</td>
+</tr>
+<tr class="odd">
+<td align="left">B3</td>
+<td align="left">Wednesday</td>
+<td align="right">-8.1</td>
 </tr>
 </tbody>
 </table>
@@ -193,29 +193,19 @@
 <p>Databases that follow the above described structure belong to the category of Relational Database Systems (RDBS). Popular (open source) instances are <a href="https://www.postgresql.org/">PostgreSQL</a> and <a href="https://www.mysql.com/">MySQL</a>. Another category of database systems that is gaining attention are the NoSQL systems. An example is <a href="https://www.mongodb.com/">MongoDB</a> (also open source). An important difference between the two categories is that an RDBS can only hold one value per cell in a table (like a spreadsheet), whereas a NoSQL database can hold nested vectors of values in one cell (like <a href="http://www.json.org/">JSON</a>).</p>
 <pre><code>## [
 ##   {
-##     &quot;DeviceID&quot;: &quot;A1&quot;,
-##     &quot;Weekday&quot;: &quot;Monday&quot;,
-##     &quot;Temperature&quot;: [-8.9]
-##   },
-##   {
 ##     &quot;DeviceID&quot;: &quot;A3&quot;,
 ##     &quot;Weekday&quot;: &quot;Monday&quot;,
-##     &quot;Temperature&quot;: [-8.6]
+##     &quot;Temperature&quot;: [-8, -8.1]
 ##   },
 ##   {
 ##     &quot;DeviceID&quot;: &quot;A4&quot;,
 ##     &quot;Weekday&quot;: &quot;Monday&quot;,
-##     &quot;Temperature&quot;: [-8.3]
+##     &quot;Temperature&quot;: [-9.1]
 ##   },
 ##   {
-##     &quot;DeviceID&quot;: &quot;B1&quot;,
+##     &quot;DeviceID&quot;: &quot;B4&quot;,
 ##     &quot;Weekday&quot;: &quot;Monday&quot;,
-##     &quot;Temperature&quot;: [-8.5, -9.1, -9.2]
-##   },
-##   {
-##     &quot;DeviceID&quot;: &quot;B3&quot;,
-##     &quot;Weekday&quot;: &quot;Monday&quot;,
-##     &quot;Temperature&quot;: [-8.5, -8.1]
+##     &quot;Temperature&quot;: [-9.1, -8.1]
 ##   }
 ## ]</code></pre>
 <p><span class="citation">(Video: Google Developers <a href="#ref-google_developers_google_nodate">2012</a>)</span> <iframe width="560" height="315" src="https://www.youtube.com/embed/rRoy6I4gKWU" frameborder="0" allowfullscreen></iframe></p>

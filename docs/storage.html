@@ -78,9 +78,7 @@
 <li class="chapter" data-level="7" data-path="sensors.html"><a href="sensors.html"><i class="fa fa-check"></i><b>7</b> Sensors</a></li>
 <li class="chapter" data-level="8" data-path="communication.html"><a href="communication.html"><i class="fa fa-check"></i><b>8</b> Data Communication</a></li>
 <li class="chapter" data-level="9" data-path="storage.html"><a href="storage.html"><i class="fa fa-check"></i><b>9</b> Cloud Storage</a><ul>
-<li class="chapter" data-level="9.1" data-path="storage.html"><a href="storage.html#database-systems"><i class="fa fa-check"></i><b>9.1</b> Database Systems</a><ul>
-<li class="chapter" data-level="9.1.1" data-path="storage.html"><a href="storage.html#video-google-io-2012---sql-vs-nosql-battle-of-the-backends"><i class="fa fa-check"></i><b>9.1.1</b> Video: Google I/O 2012 - SQL vs NoSQL: Battle of the Backends</a></li>
-</ul></li>
+<li class="chapter" data-level="9.1" data-path="storage.html"><a href="storage.html#database-systems"><i class="fa fa-check"></i><b>9.1</b> Database Systems</a></li>
 <li class="chapter" data-level="9.2" data-path="storage.html"><a href="storage.html#things-in-a-network"><i class="fa fa-check"></i><b>9.2</b> Things in a network</a></li>
 <li class="chapter" data-level="9.3" data-path="storage.html"><a href="storage.html#amazon-web-services"><i class="fa fa-check"></i><b>9.3</b> Amazon Web Services</a></li>
 </ul></li>
@@ -135,39 +133,49 @@
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">A3</td>
+<td align="left">B2</td>
 <td align="left">Monday</td>
-<td align="right">-8.2</td>
+<td align="right">-9.2</td>
 </tr>
 <tr class="even">
-<td align="left">A3</td>
-<td align="left">Monday</td>
-<td align="right">-8.1</td>
-</tr>
-<tr class="odd">
-<td align="left">A3</td>
-<td align="left">Monday</td>
-<td align="right">-8.5</td>
-</tr>
-<tr class="even">
-<td align="left">A3</td>
+<td align="left">B3</td>
 <td align="left">Monday</td>
 <td align="right">-8.3</td>
 </tr>
 <tr class="odd">
-<td align="left">B1</td>
+<td align="left">A4</td>
 <td align="left">Monday</td>
 <td align="right">-8.4</td>
 </tr>
 <tr class="even">
+<td align="left">A1</td>
+<td align="left">Monday</td>
+<td align="right">-8.5</td>
+</tr>
+<tr class="odd">
 <td align="left">A3</td>
+<td align="left">Monday</td>
+<td align="right">-8.6</td>
+</tr>
+<tr class="even">
+<td align="left">B2</td>
 <td align="left">Tuesday</td>
 <td align="right">-8.4</td>
 </tr>
 <tr class="odd">
+<td align="left">A3</td>
+<td align="left">Tuesday</td>
+<td align="right">-8.3</td>
+</tr>
+<tr class="even">
+<td align="left">A3</td>
+<td align="left">Tuesday</td>
+<td align="right">-9.1</td>
+</tr>
+<tr class="odd">
 <td align="left">A1</td>
 <td align="left">Tuesday</td>
-<td align="right">-8.4</td>
+<td align="right">-8.9</td>
 </tr>
 <tr class="even">
 <td align="left">A3</td>
@@ -177,17 +185,7 @@
 <tr class="odd">
 <td align="left">A4</td>
 <td align="left">Tuesday</td>
-<td align="right">-8.6</td>
-</tr>
-<tr class="even">
-<td align="left">B1</td>
-<td align="left">Tuesday</td>
-<td align="right">-8.9</td>
-</tr>
-<tr class="odd">
-<td align="left">B3</td>
-<td align="left">Wednesday</td>
-<td align="right">-8.8</td>
+<td align="right">-8.4</td>
 </tr>
 </tbody>
 </table>
@@ -195,18 +193,33 @@
 <p>Databases that follow the above described structure belong to the category of Relational Database Systems (RDBS). Popular (open source) instances are <a href="https://www.postgresql.org/">PostgreSQL</a> and <a href="https://www.mysql.com/">MySQL</a>. Another category of database systems that is gaining attention are the NoSQL systems. An example is <a href="https://www.mongodb.com/">MongoDB</a> (also open source). The main difference between the two categories is that an RDBS can only hold one value per cell in a table (like a spreadsheet), whereas a NoSQL database can hold nested vectors of values in one cell (like <a href="http://www.json.org/">JSON</a>).</p>
 <pre><code>## [
 ##   {
-##     &quot;DeviceID&quot;: &quot;A3&quot;,
+##     &quot;DeviceID&quot;: &quot;A1&quot;,
 ##     &quot;Weekday&quot;: &quot;Monday&quot;,
-##     &quot;Temperature&quot;: [-8.2, -8.1, -8.5, -8.3]
+##     &quot;Temperature&quot;: [-8.5]
 ##   },
 ##   {
-##     &quot;DeviceID&quot;: &quot;B1&quot;,
+##     &quot;DeviceID&quot;: &quot;A3&quot;,
+##     &quot;Weekday&quot;: &quot;Monday&quot;,
+##     &quot;Temperature&quot;: [-8.6]
+##   },
+##   {
+##     &quot;DeviceID&quot;: &quot;A4&quot;,
 ##     &quot;Weekday&quot;: &quot;Monday&quot;,
 ##     &quot;Temperature&quot;: [-8.4]
+##   },
+##   {
+##     &quot;DeviceID&quot;: &quot;B2&quot;,
+##     &quot;Weekday&quot;: &quot;Monday&quot;,
+##     &quot;Temperature&quot;: [-9.2]
+##   },
+##   {
+##     &quot;DeviceID&quot;: &quot;B3&quot;,
+##     &quot;Weekday&quot;: &quot;Monday&quot;,
+##     &quot;Temperature&quot;: [-8.3]
 ##   }
 ## ]</code></pre>
-<div id="video-google-io-2012---sql-vs-nosql-battle-of-the-backends" class="section level3">
-<h3><span class="header-section-number">9.1.1</span> Video: Google I/O 2012 - SQL vs NoSQL: Battle of the Backends</h3>
+<div id="video-google-io-2012---sql-vs-nosql-battle-of-the-backends" class="section level4">
+<h4><span class="header-section-number">9.1.0.1</span> Video: Google I/O 2012 - SQL vs NoSQL: Battle of the Backends</h4>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/rRoy6I4gKWU" frameborder="0" allowfullscreen>
 </iframe>
 </div>

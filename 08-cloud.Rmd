@@ -45,7 +45,7 @@ newDF <- aggregate(Temperature ~ DeviceID + Weekday, SensorData, list) %>% filte
 toJSON(newDF, pretty=TRUE)
 ```
 
-### Video: Google I/O 2012 - SQL vs NoSQL: Battle of the Backends
+#### Video: Google I/O 2012 - SQL vs NoSQL: Battle of the Backends
 <iframe width="560" height="315" src="https://www.youtube.com/embed/rRoy6I4gKWU" frameborder="0" allowfullscreen></iframe>
 
 ## Things in a network

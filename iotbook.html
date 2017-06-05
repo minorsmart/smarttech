@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Internet of Things for Smart Industry</title>
+  <meta name="description" content="This is a accompanying book to the HAN Minor Smart Industry">
+  <meta name="generator" content="bookdown <!--bookdown:version--> and GitBook 2.6.7">
+
+  <meta property="og:title" content="Internet of Things for Smart Industry" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This is a accompanying book to the HAN Minor Smart Industry" />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Internet of Things for Smart Industry" />
+  
+  <meta name="twitter:description" content="This is a accompanying book to the HAN Minor Smart Industry" />
+  
+
+<meta name="author" content="Franz Maurer, Witek ten Hove &amp; Deny Smeets">
+
+
+<meta name="date" content="2017-06-05">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<!--bookdown:link_prev-->
+<!--bookdown:link_next-->
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+<!--bookdown:title:start-->
+<div id="header">
+<h1 class="title">Internet of Things for Smart Industry</h1>
+<h4 class="author"><em>Franz Maurer, Witek ten Hove &amp; Deny Smeets</em></h4>
+<h4 class="date"><em>2017-06-05</em></h4>
+</div>
+<!--bookdown:title:end-->
+
+<!--bookdown:toc:start-->
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+<!--bookdown:toc2:start-->
+<ul>
+<li><a href="#welcome"><span class="toc-section-number">1</span> Welcome</a></li>
+<li><a href="#intro"><span class="toc-section-number">2</span> - Introduction to IoT</a></li>
+<li><a href="#capabilities"><span class="toc-section-number">3</span> IoT Capabilities</a></li>
+<li><a href="#framework"><span class="toc-section-number">4</span> IoT Framework</a></li>
+<li><a href="#markets"><span class="toc-section-number">5</span> IoT Markets</a><ul>
+<li><a href="#example-one"><span class="toc-section-number">5.1</span> Example one</a></li>
+<li><a href="#example-two"><span class="toc-section-number">5.2</span> Example two</a></li>
+</ul></li>
+<li><a href="#fundamentals"><span class="toc-section-number">6</span> IoT Fundamentals</a></li>
+<li><a href="#sensors"><span class="toc-section-number">7</span> Sensors</a></li>
+<li><a href="#communications"><span class="toc-section-number">8</span> Data Communication</a></li>
+<li><a href="#platforms"><span class="toc-section-number">9</span> Cloud Platforms</a></li>
+<li><a href="#privacy"><span class="toc-section-number">10</span> Privacy</a></li>
+<li><a href="#security"><span class="toc-section-number">11</span> Security</a></li>
+<li><a href="#encryption"><span class="toc-section-number">12</span> Encryption</a></li>
+<li><a href="#analytics"><span class="toc-section-number">13</span> Data Analytics</a></li>
+<li><a href="#apps"><span class="toc-section-number">14</span> Dashboards and Apps</a></li>
+<li><a href="#arduino"><span class="toc-section-number">15</span> Arduino Programming</a></li>
+<li><a href="#references">References</a></li>
+</ul>
+<!--bookdown:toc2:end-->
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Internet of Things for Smart Industry</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<!--bookdown:toc:end-->
+<!--bookdown:body:start-->
+<div id="welcome" class="section level1">
+<h1><span class="header-section-number">1</span> Welcome</h1>
+<p>This is an accompanying book to the HAN Minor Smart Industry and covers the major topics regarding the Internet of Things (IoT) implementation in an industrial setting.</p>
+<!--chapter:end:index.Rmd-->
+</div>
+<div id="intro" class="section level1">
+<h1><span class="header-section-number">2</span> - Introduction to IoT</h1>
+<p>The IoT is the product of physical objects, controllers, sensors and actuators and the internet <span class="citation">(McEwen and Cassimally <a href="#ref-mcewen_designing_2013">2013</a>)</span>. The first reference to the IoT was in 1982, when researchers at Carnegie Mellon University developed the world’s first IoT-enabled Coke Machine. Mark Weiser developed the concept further in the early 90s; and Kevin Ashton coined the term ‘Internet of Things’ around 1999.</p>
+<!--chapter:end:01-intro.Rmd-->
+</div>
+<div id="capabilities" class="section level1">
+<h1><span class="header-section-number">3</span> IoT Capabilities</h1>
+<video width="400" height="300" controls>
+<source src="./docs/iotbook_files/vids/design.mp4"> Your browser does not support this format.
+</video>
+<!--chapter:end:02-capabilities.Rmd-->
+</div>
+<div id="framework" class="section level1">
+<h1><span class="header-section-number">4</span> IoT Framework</h1>
+<p>We describe our methods in this chapter.</p>
+<!--chapter:end:03-framework.Rmd-->
+</div>
+<div id="markets" class="section level1">
+<h1><span class="header-section-number">5</span> IoT Markets</h1>
+<p>Some <em>significant</em> applications are demonstrated in this chapter.</p>
+<div id="example-one" class="section level2">
+<h2><span class="header-section-number">5.1</span> Example one</h2>
+</div>
+<div id="example-two" class="section level2">
+<h2><span class="header-section-number">5.2</span> Example two</h2>
+<!--chapter:end:04-markets.Rmd-->
+</div>
+</div>
+<div id="fundamentals" class="section level1">
+<h1><span class="header-section-number">6</span> IoT Fundamentals</h1>
+<p>We have finished a nice book.</p>
+<!--chapter:end:05-fundamentals.Rmd-->
+</div>
+<div id="sensors" class="section level1">
+<h1><span class="header-section-number">7</span> Sensors</h1>
+<p>We have finished a nice book.</p>
+<!--chapter:end:06-sensors.Rmd-->
+</div>
+<div id="communications" class="section level1">
+<h1><span class="header-section-number">8</span> Data Communication</h1>
+<p>We have finished a nice book.</p>
+<!--chapter:end:07-communication.Rmd-->
+</div>
+<div id="platforms" class="section level1">
+<h1><span class="header-section-number">9</span> Cloud Platforms</h1>
+<p>We have finished a nice book.</p>
+<!--chapter:end:08-cloud.Rmd-->
+</div>
+<div id="privacy" class="section level1">
+<h1><span class="header-section-number">10</span> Privacy</h1>
+<p>We have finished a nice book.</p>
+<!--chapter:end:09-privacy.Rmd-->
+</div>
+<div id="security" class="section level1">
+<h1><span class="header-section-number">11</span> Security</h1>
+<p>We have finished a nice book.</p>
+<!--chapter:end:10-security.Rmd-->
+</div>
+<div id="encryption" class="section level1">
+<h1><span class="header-section-number">12</span> Encryption</h1>
+<p>We have finished a nice book.</p>
+<!--chapter:end:11-encryption.Rmd-->
+</div>
+<div id="analytics" class="section level1">
+<h1><span class="header-section-number">13</span> Data Analytics</h1>
+<p>We have finished a nice book.</p>
+<!--chapter:end:12-analytics.Rmd-->
+</div>
+<div id="apps" class="section level1">
+<h1><span class="header-section-number">14</span> Dashboards and Apps</h1>
+<p>We have finished a nice book.</p>
+<!--chapter:end:13-apps.Rmd-->
+</div>
+<div id="arduino" class="section level1">
+<h1><span class="header-section-number">15</span> Arduino Programming</h1>
+<p>We have finished a nice book.</p>
+<!--chapter:end:14-arduino.Rmd-->
+</div>
+<div id="references" class="section level1 unnumbered">
+<h1>References</h1>
+<!--chapter:end:15-references.Rmd-->
+<div id="refs" class="references">
+<div id="ref-mcewen_designing_2013">
+<p>McEwen, Adrian, and Hakim Cassimally. 2013. <em>Designing the Internet of Things</em>. John Wiley &amp; Sons.</p>
+</div>
+</div>
+</div>
+<!--bookdown:body:end-->
+            </section>
+
+          </div>
+        </div>
+      </div>
+<!--bookdown:link_prev-->
+<!--bookdown:link_next-->
+    </div>
+  </div>
+<!--bookdown:config-->
+
+</body>
+
+</html>

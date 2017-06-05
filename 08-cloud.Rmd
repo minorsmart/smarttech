@@ -11,7 +11,29 @@ As most IoT devices have very limited memory resources, the data they produce ha
 
 However we soon would encounter some annoying practical problems. For instance while data is written to a text file it is blocked. This would mean other devices can not add their data resulting in data loss. Also a text file is not the most efficient user of memory and its size would grow exponentially when used in a professional application with large numbers of devices and users. Other issues include lack of search and filtering facilities and connecting to other data tables.
 
-The above mentioned problems are not uniquely related to the IoT system. It translates to any client server environment. Database systems have been developed to cope with the challenges of efficiently creating large quantities of data, read records, and update and delete them. These basic database functionalities have been summarized in the CRUD acronym. 
+The above mentioned problems are not uniquely related to the IoT system. It translates to any client server environment. Database systems have been developed to cope with the challenges of efficiently creating large quantities of data, read records, and update and delete them. These basic database functionalities have been summarized in the CRUD acronym.
+
+The most common language for doing CRUD operations on a database is SQL (Structured Query Language). It has a rather human friendly syntax. For example this is the instruction for retrieving a selection of data from a data table:
+
+```
+SELECT * FROM SensorData WHERE Weekday = 'Monday'
+```
+
+```{r dbtable, echo=FALSE, message=FALSE, warning=FALSE}
+days <- weekdays(x=as.Date(seq(7), origin="1950-01-01"))
+dev <- as.vector(outer(c("A", "B"), 1:4, paste0))
+randomvec <- as.vector(sample(5:8, 7, replace=TRUE))
+Weekday <- rep(days, randomvec)
+l <- length(Weekday)
+DeviceID <- sample(dev, l, replace = TRUE)
+Temperature <- round(runif(l, min = -9.2, max = -8), 1)
+SensorData <- data.frame(DeviceID, Weekday, Temperature)
+knitr::kable(head(SensorData, 11), booktabs = TRUE,
+  caption = 'An example database table: SensorData'
+)
+```
+
+A database consists of many tables. These tables can be related through key variables. For instance one table can contain sensor data while another table contains the meta data per device. These tables can be combined via a shared variable (*field*) containing the device IDs.
 
 ## Things in a network
 

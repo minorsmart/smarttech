@@ -4,7 +4,7 @@ After sensors start to send data it is necessary that you define a place where t
 
 Raw data is in fact meaningless. You will have to analyze it, reshuffle, run statistics on it, correlate it with other data, watch for exceptional values and so on to make raw sensor data valuable for your business goals. We will touch on data analytics, machine learning and data science in [section 13](#analytics).
 
-In this chapter we will look into data, their place in the IoT infrastructure and explore one of the many cloud solutions.
+In this chapter we will look into data, its place in the IoT infrastructure and explore one of the many cloud solutions.
 
 ## Database Systems
 As most IoT devices have very limited memory resources, the data they produce has to be stored elsewhere. We discussed the data communication possibilities in [section 8](#communication). In theory the data could be gathered into a simple text file and applications could read from this source.

@@ -14,7 +14,7 @@ However we soon would encounter some annoying practical problems. For instance w
 The above mentioned problems are not uniquely related to the IoT system. It translates to any client server environment. Database systems have been developed to cope with the challenges of efficiently creating large quantities of data, read records, and update and delete them. These basic database functionalities have been summarized in the CRUD acronym.
 
 The most common language for doing CRUD operations on a database is SQL (Structured Query Language). It has a rather human friendly syntax. For example this is the instruction for retrieving a selection of data from a data table (What do you think it will return?):
-
+<br>
 ```
 SELECT * FROM SensorData WHERE Weekday = 'Monday'
 ```
@@ -46,7 +46,7 @@ knitr::kable(head(SensorData, 11), booktabs = TRUE,
   caption = 'An example database table: SensorData'
 )
 ```
-
+<br>
 A database consists of many tables. These tables can be related through key variables. For instance one table can contain sensor data while another table contains the meta data per device. These tables can be combined via a shared variable (*field*) containing the device IDs. When the meta data includes location data (e.g. longitude/latitude) you could draw maps with the temperature measurements (click on the markers in the map).
 <br>
 
@@ -67,8 +67,9 @@ leaflet(data = sensorDF) %>% addTiles() %>%
   addMarkers(~lon, ~lat, popup = ~as.character(paste('Temp: ',Temperature)))
 ```
 
-<br><br>
+<br>
 Databases that follow the above described structure belong to the category of Relational Database Systems (RDBS). Popular (open source) instances are [PostgreSQL](https://www.postgresql.org/) and [MySQL](https://www.mysql.com/). Another category of database systems that is gaining attention are the NoSQL systems. An example is [MongoDB](https://www.mongodb.com/) (also open source). An important difference between the two categories is that an RDBS can only hold one value per cell in a table (like a spreadsheet), whereas a NoSQL database can hold nested vectors of values in one cell (like [JSON](http://www.json.org/)).
+<br>
 
 ```{r nosql, echo=FALSE, message=FALSE, warning=FALSE}
 library(jsonlite)
@@ -77,19 +78,20 @@ library(dplyr)
 newDF <- aggregate(Temperature ~ DeviceID + Weekday, SensorData, list) %>% filter(Weekday == 'Monday')
 toJSON(newDF, pretty=TRUE)
 ```
-
+<br>
 
 [Video: @google_developers_google_nodate]
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/rRoy6I4gKWU" frameborder="0" allowfullscreen></iframe>
+<br>
 
 Another interesting alternative database architecture is the graph database. In a graph database data is represented as a network where the records are stored in nodes and the relationships in the edges. This is a very convenient solution when you are more interested in the relationships between objects rather than doing aggregations on the objects (sums, averages, etc).
-
+<br>
 
 [Video: @neo4j_-_the_worlds_leading_graph_database_intro_nodate]
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/83P81ebgCxA" frameborder="0" allowfullscreen></iframe>
-
+<br>
 
 
 ## Things in a network

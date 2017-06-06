@@ -125,7 +125,7 @@
 <p>As most IoT devices have very limited memory resources, the data they produce has to be stored elsewhere. We discussed the data communication possibilities in <a href="communication.html#communication">section 8</a>. In theory the data could be gathered into a simple text file and applications could read from this source.</p>
 <p>However we soon would encounter some annoying practical problems. For instance while data is written to a text file it is blocked. This would mean other devices can not add their data resulting in data loss. Also a text file is not the most efficient user of memory and its size would grow exponentially when used in a professional application with large numbers of devices and users. Other issues include lack of search and filtering facilities and connecting to other data tables.</p>
 <p>The above mentioned problems are not uniquely related to the IoT system. It translates to any client server environment. Database systems have been developed to cope with the challenges of efficiently creating large quantities of data, read records, and update and delete them. These basic database functionalities have been summarized in the CRUD acronym.</p>
-<p>The most common language for doing CRUD operations on a database is SQL (Structured Query Language). It has a rather human friendly syntax. For example this is the instruction for retrieving a selection of data from a data table (What do you think it will return?):</p>
+<p>The most common language for doing CRUD operations on a database is SQL (Structured Query Language). It has a rather human friendly syntax. For example this is the instruction for retrieving a selection of data from a data table (What do you think it will return?): <br></p>
 <pre><code>SELECT * FROM SensorData WHERE Weekday = &#39;Monday&#39;</code></pre>
 <table>
 <caption><span id="tab:dbtable">Table 9.1: </span>An example database table: SensorData</caption>
@@ -138,100 +138,122 @@
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">A4</td>
-<td align="left">Monday</td>
-<td align="right">-8.7</td>
-</tr>
-<tr class="even">
 <td align="left">A2</td>
 <td align="left">Monday</td>
-<td align="right">-8.5</td>
-</tr>
-<tr class="odd">
-<td align="left">B1</td>
-<td align="left">Monday</td>
-<td align="right">-9.1</td>
+<td align="right">-8.1</td>
 </tr>
 <tr class="even">
-<td align="left">A1</td>
+<td align="left">A4</td>
 <td align="left">Monday</td>
-<td align="right">-8.8</td>
+<td align="right">-8.3</td>
 </tr>
 <tr class="odd">
 <td align="left">B4</td>
 <td align="left">Monday</td>
+<td align="right">-8.3</td>
+</tr>
+<tr class="even">
+<td align="left">B3</td>
+<td align="left">Monday</td>
+<td align="right">-8.1</td>
+</tr>
+<tr class="odd">
+<td align="left">B2</td>
+<td align="left">Monday</td>
+<td align="right">-8.3</td>
+</tr>
+<tr class="even">
+<td align="left">B1</td>
+<td align="left">Monday</td>
+<td align="right">-9.0</td>
+</tr>
+<tr class="odd">
+<td align="left">A2</td>
+<td align="left">Monday</td>
+<td align="right">-8.7</td>
+</tr>
+<tr class="even">
+<td align="left">A1</td>
+<td align="left">Tuesday</td>
 <td align="right">-8.2</td>
+</tr>
+<tr class="odd">
+<td align="left">B4</td>
+<td align="left">Tuesday</td>
+<td align="right">-9.1</td>
 </tr>
 <tr class="even">
 <td align="left">A3</td>
 <td align="left">Tuesday</td>
-<td align="right">-8.4</td>
-</tr>
-<tr class="odd">
-<td align="left">B3</td>
-<td align="left">Tuesday</td>
-<td align="right">-8.1</td>
-</tr>
-<tr class="even">
-<td align="left">A2</td>
-<td align="left">Tuesday</td>
-<td align="right">-9.1</td>
-</tr>
-<tr class="odd">
-<td align="left">A1</td>
-<td align="left">Tuesday</td>
-<td align="right">-8.9</td>
-</tr>
-<tr class="even">
-<td align="left">B2</td>
-<td align="left">Tuesday</td>
-<td align="right">-8.5</td>
+<td align="right">-9.0</td>
 </tr>
 <tr class="odd">
 <td align="left">A4</td>
 <td align="left">Tuesday</td>
-<td align="right">-8.7</td>
+<td align="right">-8.8</td>
+</tr>
+<tr class="even">
+<td align="left"><br></td>
+<td align="left"></td>
+<td align="right"></td>
+</tr>
+<tr class="odd">
+<td align="left">A database</td>
+<td align="left">consists o</td>
+<td align="right">f many tables. These tables can be related through key variables. For instance one table can contain sensor data while another table contains the meta data per device. These tables can be combined via a shared variable (<em>field</em>) containing the device IDs. When the meta data includes location data (e.g. longitude/latitude) you could draw maps with the temperature measurements (click on the markers in the map).</td>
+</tr>
+<tr class="even">
+<td align="left"><br></td>
+<td align="left"></td>
+<td align="right"></td>
 </tr>
 </tbody>
 </table>
-<p>A database consists of many tables. These tables can be related through key variables. For instance one table can contain sensor data while another table contains the meta data per device. These tables can be combined via a shared variable (<em>field</em>) containing the device IDs. When the meta data includes location data (e.g. longitude/latitude) you could draw maps with the temperature measurements (click on the markers in the map). <br></p>
-<div id="htmlwidget-818c4fc9c513d0efffde" style="width:672px;height:480px;" class="leaflet html-widget"></div>
-<script type="application/json" data-for="htmlwidget-818c4fc9c513d0efffde">{"x":{"calls":[{"method":"addTiles","args":["http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"maxNativeZoom":null,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"continuousWorld":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":null,"unloadInvisibleTiles":null,"updateWhenIdle":null,"detectRetina":false,"reuseTiles":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap\u003c/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA\u003c/a>"}]},{"method":"addMarkers","args":[[51.9226067,51.8125626,51.5046455,51.9851034,51.6878954],[4.2545656,5.8372264,3.8911304,5.8987296,5.0574822],null,null,null,{"clickable":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},["Temp:  -8.8","Temp:  -8.5","Temp:  -8.7","Temp:  -9.1","Temp:  -8.2"],null,null]}],"limits":{"lat":[51.5046455,51.9851034],"lng":[3.8911304,5.8987296]}},"evals":[],"jsHooks":[]}</script>
-<p><br><br> Databases that follow the above described structure belong to the category of Relational Database Systems (RDBS). Popular (open source) instances are <a href="https://www.postgresql.org/">PostgreSQL</a> and <a href="https://www.mysql.com/">MySQL</a>. Another category of database systems that is gaining attention are the NoSQL systems. An example is <a href="https://www.mongodb.com/">MongoDB</a> (also open source). An important difference between the two categories is that an RDBS can only hold one value per cell in a table (like a spreadsheet), whereas a NoSQL database can hold nested vectors of values in one cell (like <a href="http://www.json.org/">JSON</a>).</p>
+<div id="htmlwidget-1b20c0a7cda5ddc9e247" style="width:672px;height:480px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-1b20c0a7cda5ddc9e247">{"x":{"calls":[{"method":"addTiles","args":["http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"maxNativeZoom":null,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"continuousWorld":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":null,"unloadInvisibleTiles":null,"updateWhenIdle":null,"detectRetina":false,"reuseTiles":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap\u003c/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA\u003c/a>"}]},{"method":"addMarkers","args":[[51.8125626,51.8125626,51.5046455,51.9851034,51.7611801,52.9562808,51.6878954],[5.8372264,5.8372264,3.8911304,5.8987296,5.5140482,4.7607972,5.0574822],null,null,null,{"clickable":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},["Temp:  -8.1","Temp:  -8.7","Temp:  -8.3","Temp:  -9","Temp:  -8.3","Temp:  -8.1","Temp:  -8.3"],null,null]}],"limits":{"lat":[51.5046455,52.9562808],"lng":[3.8911304,5.8987296]}},"evals":[],"jsHooks":[]}</script>
+<p><br> Databases that follow the above described structure belong to the category of Relational Database Systems (RDBS). Popular (open source) instances are <a href="https://www.postgresql.org/">PostgreSQL</a> and <a href="https://www.mysql.com/">MySQL</a>. Another category of database systems that is gaining attention are the NoSQL systems. An example is <a href="https://www.mongodb.com/">MongoDB</a> (also open source). An important difference between the two categories is that an RDBS can only hold one value per cell in a table (like a spreadsheet), whereas a NoSQL database can hold nested vectors of values in one cell (like <a href="http://www.json.org/">JSON</a>). <br></p>
 <pre><code>## [
-##   {
-##     &quot;DeviceID&quot;: &quot;A1&quot;,
-##     &quot;Weekday&quot;: &quot;Monday&quot;,
-##     &quot;Temperature&quot;: [-8.8]
-##   },
 ##   {
 ##     &quot;DeviceID&quot;: &quot;A2&quot;,
 ##     &quot;Weekday&quot;: &quot;Monday&quot;,
-##     &quot;Temperature&quot;: [-8.5]
+##     &quot;Temperature&quot;: [-8.1, -8.7]
 ##   },
 ##   {
 ##     &quot;DeviceID&quot;: &quot;A4&quot;,
 ##     &quot;Weekday&quot;: &quot;Monday&quot;,
-##     &quot;Temperature&quot;: [-8.7]
+##     &quot;Temperature&quot;: [-8.3]
 ##   },
 ##   {
 ##     &quot;DeviceID&quot;: &quot;B1&quot;,
 ##     &quot;Weekday&quot;: &quot;Monday&quot;,
-##     &quot;Temperature&quot;: [-9.1]
+##     &quot;Temperature&quot;: [-9]
+##   },
+##   {
+##     &quot;DeviceID&quot;: &quot;B2&quot;,
+##     &quot;Weekday&quot;: &quot;Monday&quot;,
+##     &quot;Temperature&quot;: [-8.3]
+##   },
+##   {
+##     &quot;DeviceID&quot;: &quot;B3&quot;,
+##     &quot;Weekday&quot;: &quot;Monday&quot;,
+##     &quot;Temperature&quot;: [-8.1]
 ##   },
 ##   {
 ##     &quot;DeviceID&quot;: &quot;B4&quot;,
 ##     &quot;Weekday&quot;: &quot;Monday&quot;,
-##     &quot;Temperature&quot;: [-8.2]
+##     &quot;Temperature&quot;: [-8.3]
 ##   }
 ## ]</code></pre>
+<p><br></p>
 <p><span class="citation">(Video: Google Developers <a href="#ref-google_developers_google_nodate">2012</a>)</span></p>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/rRoy6I4gKWU" frameborder="0" allowfullscreen>
 </iframe>
-<p>Another interesting alternative database architecture is the graph database. In a graph database data is represented as a network where the records are stored in nodes and the relationships in the edges. This is a very convenient solution when you are more interested in the relationships between objects rather than doing aggregations on the objects (sums, averages, etc).</p>
+<p><br></p>
+<p>Another interesting alternative database architecture is the graph database. In a graph database data is represented as a network where the records are stored in nodes and the relationships in the edges. This is a very convenient solution when you are more interested in the relationships between objects rather than doing aggregations on the objects (sums, averages, etc). <br></p>
 <p><span class="citation">(Video: Neo4j - the World’s Leading Graph Database <a href="#ref-neo4j_-_the_worlds_leading_graph_database_intro_nodate">2016</a>)</span></p>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/83P81ebgCxA" frameborder="0" allowfullscreen>
 </iframe>
+<p><br></p>
 </div>
 <div id="things-in-a-network" class="section level2">
 <h2><span class="header-section-number">9.2</span> Things in a network</h2>

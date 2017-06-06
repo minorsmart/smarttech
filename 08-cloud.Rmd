@@ -46,6 +46,7 @@ knitr::kable(head(SensorData, 11), booktabs = TRUE,
   caption = 'An example database table: SensorData'
 )
 ```
+
 <br>
 A database consists of many tables. These tables can be related through key variables. For instance one table can contain sensor data while another table contains the meta data per device. These tables can be combined via a shared variable (*field*) containing the device IDs. When the meta data includes location data (e.g. longitude/latitude) you could draw maps with the temperature measurements (click on the markers in the map).
 <br>

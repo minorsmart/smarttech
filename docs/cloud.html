@@ -25,7 +25,7 @@
 <meta name="author" content="Franz Maurer, Witek ten Hove &amp; Deny Smeets">
 
 
-<meta name="date" content="2017-06-06">
+<meta name="date" content="2017-06-07">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -138,91 +138,86 @@
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">B3</td>
-<td align="left">Monday</td>
-<td align="right">-8.0</td>
-</tr>
-<tr class="even">
-<td align="left">B2</td>
+<td align="left">A4</td>
 <td align="left">Monday</td>
 <td align="right">-9.0</td>
 </tr>
-<tr class="odd">
-<td align="left">A3</td>
+<tr class="even">
+<td align="left">A2</td>
 <td align="left">Monday</td>
 <td align="right">-8.4</td>
+</tr>
+<tr class="odd">
+<td align="left">B3</td>
+<td align="left">Monday</td>
+<td align="right">-8.3</td>
 </tr>
 <tr class="even">
 <td align="left">A4</td>
 <td align="left">Monday</td>
-<td align="right">-8.5</td>
+<td align="right">-8.8</td>
+</tr>
+<tr class="odd">
+<td align="left">A2</td>
+<td align="left">Monday</td>
+<td align="right">-8.9</td>
+</tr>
+<tr class="even">
+<td align="left">A2</td>
+<td align="left">Monday</td>
+<td align="right">-8.3</td>
 </tr>
 <tr class="odd">
 <td align="left">A3</td>
 <td align="left">Monday</td>
-<td align="right">-8.6</td>
+<td align="right">-8.9</td>
 </tr>
 <tr class="even">
-<td align="left">A1</td>
+<td align="left">A2</td>
 <td align="left">Monday</td>
-<td align="right">-9.1</td>
-</tr>
-<tr class="odd">
-<td align="left">B2</td>
-<td align="left">Monday</td>
-<td align="right">-8.7</td>
-</tr>
-<tr class="even">
-<td align="left">B2</td>
-<td align="left">Tuesday</td>
 <td align="right">-8.4</td>
-</tr>
-<tr class="odd">
-<td align="left">A1</td>
-<td align="left">Tuesday</td>
-<td align="right">-8.4</td>
-</tr>
-<tr class="even">
-<td align="left">B4</td>
-<td align="left">Tuesday</td>
-<td align="right">-9.1</td>
 </tr>
 <tr class="odd">
 <td align="left">B4</td>
 <td align="left">Tuesday</td>
-<td align="right">-8.6</td>
+<td align="right">-8.8</td>
+</tr>
+<tr class="even">
+<td align="left">A1</td>
+<td align="left">Tuesday</td>
+<td align="right">-8.5</td>
+</tr>
+<tr class="odd">
+<td align="left">B3</td>
+<td align="left">Tuesday</td>
+<td align="right">-8.9</td>
 </tr>
 </tbody>
 </table>
-<p><br> A database consists of many tables. These tables can be related through key variables. For instance one table can contain sensor data while another table contains the meta data per device. These tables can then be combined via a shared variable (<em>field</em>) containing the device IDs. If the meta data includes location data (e.g. longitude/latitude) you could draw maps with the measured values (click on the markers in the map). <br></p>
-<div id="htmlwidget-6a334e20b4682e01e3de" style="width:672px;height:480px;" class="leaflet html-widget"></div>
-<script type="application/json" data-for="htmlwidget-6a334e20b4682e01e3de">{"x":{"calls":[{"method":"addTiles","args":["http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"maxNativeZoom":null,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"continuousWorld":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":null,"unloadInvisibleTiles":null,"updateWhenIdle":null,"detectRetina":false,"reuseTiles":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap\u003c/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA\u003c/a>"}]},{"method":"addMarkers","args":[[51.9226067,52.5167747,52.5167747,51.5046455,51.7611801,51.7611801,52.9562808],[4.2545656,6.0830219,6.0830219,3.8911304,5.5140482,5.5140482,4.7607972],null,null,null,{"clickable":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},["Temp:  -9.1","Temp:  -8.4","Temp:  -8.6","Temp:  -8.5","Temp:  -9","Temp:  -8.7","Temp:  -8"],null,null]}],"limits":{"lat":[51.5046455,52.9562808],"lng":[3.8911304,6.0830219]}},"evals":[],"jsHooks":[]}</script>
+<p><br> A database consists of many tables. These tables can be related through key variables. For instance one table can contain sensor data while another table contains the meta data per device. These tables can then be combined via a shared variable (<em>field</em>) containing the device IDs. Imagine the meta data includes location data (e.g. longitude/latitude). This allows you to draw maps with the measured values (click on the markers in the map). <br></p>
+<div id="htmlwidget-756c55098c3ffe1391be" style="width:672px;height:480px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-756c55098c3ffe1391be">{"x":{"calls":[{"method":"addTiles","args":["http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"maxNativeZoom":null,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"continuousWorld":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":null,"unloadInvisibleTiles":null,"updateWhenIdle":null,"detectRetina":false,"reuseTiles":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap\u003c/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA\u003c/a>"}]},{"method":"addMarkers","args":[[51.8125626,51.8125626,51.8125626,51.8125626,52.5167747,51.5046455,51.5046455,52.9562808],[5.8372264,5.8372264,5.8372264,5.8372264,6.0830219,3.8911304,3.8911304,4.7607971],null,null,null,{"clickable":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},["Temp:  -8.4","Temp:  -8.3","Temp:  -8.9","Temp:  -8.4","Temp:  -8.9","Temp:  -9","Temp:  -8.8","Temp:  -8.3"],null,null]}],"limits":{"lat":[51.5046455,52.9562808],"lng":[3.8911304,6.0830219]}},"evals":[],"jsHooks":[]}</script>
 <p><br> Databases that follow the above described structure belong to the category of Relational Database Systems (RDBS). Popular (open source) instances are <a href="https://www.postgresql.org/">PostgreSQL</a> and <a href="https://www.mysql.com/">MySQL</a>. Another category of database systems that is gaining attention are the NoSQL systems. An example is <a href="https://www.mongodb.com/">MongoDB</a> (also open source). An important difference between the two categories is that an RDBS can only hold one value per cell in a table (like a spreadsheet), whereas a NoSQL database can hold nested vectors of values in one cell (like <a href="http://www.json.org/">JSON</a>). <br></p>
 <pre><code>## [
 ##   {
-##     &quot;DeviceID&quot;: &quot;A1&quot;,
+##     &quot;DeviceID&quot;: &quot;A2&quot;,
 ##     &quot;Weekday&quot;: &quot;Monday&quot;,
-##     &quot;Temperature&quot;: [-9.1]
+##     &quot;Temperature&quot;: [-8.4, -8.9, -8.3, -8.4]
 ##   },
 ##   {
 ##     &quot;DeviceID&quot;: &quot;A3&quot;,
 ##     &quot;Weekday&quot;: &quot;Monday&quot;,
-##     &quot;Temperature&quot;: [-8.4, -8.6]
+##     &quot;Temperature&quot;: [-8.9]
 ##   },
 ##   {
 ##     &quot;DeviceID&quot;: &quot;A4&quot;,
 ##     &quot;Weekday&quot;: &quot;Monday&quot;,
-##     &quot;Temperature&quot;: [-8.5]
-##   },
-##   {
-##     &quot;DeviceID&quot;: &quot;B2&quot;,
-##     &quot;Weekday&quot;: &quot;Monday&quot;,
-##     &quot;Temperature&quot;: [-9, -8.7]
+##     &quot;Temperature&quot;: [-9, -8.8]
 ##   },
 ##   {
 ##     &quot;DeviceID&quot;: &quot;B3&quot;,
 ##     &quot;Weekday&quot;: &quot;Monday&quot;,
-##     &quot;Temperature&quot;: [-8]
+##     &quot;Temperature&quot;: [-8.3]
 ##   }
 ## ]</code></pre>
 <p><br></p>
